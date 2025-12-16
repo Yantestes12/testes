@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Telegram Privado - Sofia Oliveira</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Acessando o chat privado da Sofia Oliveira no Telegram." />
+
+  <!-- Preconnect para URLs externas para acelerar requisições -->
+  <link rel="preconnect" href="https://w.meuprivacy.digital" />
+  <link rel="preconnect" href="https://secreto.meuprivacy.digital" />
+  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+
+  <!-- Meta Pixel para rastreamento de conversões -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '841549225254878'); 
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=841549225254878&ev=PageView&noscript=1" />
+  </noscript>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #10131c 0, #050509 50%, #000 100%);
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 460px;
+      padding: 24px;
+    }
+
+    .telegram-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: #3fa5ff;
+    }
+
+    .telegram-logo-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #3fa5ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: #fff;
+    }
+
+    .telegram-logo-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .card {
+      background: rgba(8, 10, 18, 0.95);
+      border-radius: 22px;
+      padding: 26px 22px 24px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: center;
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #111827;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .online-dot {
+      position: absolute;
+      right: calc(50% - 60px);
+      bottom: 10px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #1e88ff;
+      border: 3px solid #0b0f1a;
+      box-shadow: 0 0 12px rgba(30, 136, 255, 0.9);
+    }
+
+    .name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: rgba(255, 255, 255, 0.78);
+      margin-bottom: 18px;
+    }
+
+    .message-card {
+      background: #040814;
+      border-radius: 18px;
+      padding: 14px 16px 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 18px;
+    }
+
+    .message-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #0e1c30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3fa5ff;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .message-text-main {
+      font-size: 0.98rem;
+      margin-bottom: 2px;
+    }
+
+    .message-meta {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .cta-button-visual {
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 999px;
+      background: #1976ff;
+      padding: 11px 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.98rem;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
+    }
+
+    .spinner-ring {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-top-color: #fff;
+      animation: spin 0.9s linear infinite;
+      box-sizing: border-box;
+    }
+
+    .status-label {
+      font-size: 0.9rem;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="telegram-logo">
+      <div class="telegram-logo-icon">✈</div>
+      <div class="telegram-logo-text">Telegram</div>
+    </div>
+
+    <div class="card">
+      <div class="avatar-wrapper">
+        <div class="avatar">
+          <img src="https://secreto.meuprivacy.digital/previanewmodel/foto.jpg" alt="Sofia Oliveira" />
+        </div>
+        <div class="online-dot"></div>
+      </div>
+
+      <h1 class="name">Sofia Oliveira</h1>
+      <p class="subtitle">Vem pro meu PV bb</p>
+
+      <div class="message-card">
+        <div class="message-icon">💬</div>
+        <div>
+          <div class="message-text-main">Vem pro meu PV bb</div>
+          <div class="message-meta">Mensagem • agora</div>
+        </div>
+      </div>
+
+      <div class="cta-button-visual">
+        <div class="spinner-ring"></div>
+        <span class="status-label">Abrindo Chat Privado</span>
+      </div>
+    </div>
+  </div>
+
+<script>
+const mensagens = [
+  "Oi Sofia, tudo bem? 😊",
+  "Oi Sofia Oliveira, como tá seu dia?",
+  "Oi Sofia, vim falar com você 😏",
+  "Oi Sofia, adorei seu conteúdo!",
+  "Oi Sofia, bora conversar?",
+  "Oi Sofia, posso falar com você? 😳",
+  "Oi Sofia, vi seu perfil e gostei muito 😍",
+  "Oi Sofia, tudo certinho?"
+];
+
+function redirectToTelegram() {
+  const msg = encodeURIComponent(mensagens[Math.floor(Math.random()*mensagens.length)]);
+  
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+  fetch('https://w.meuprivacy.digital/webhook/telegram', { 
+    signal: controller.signal,
+    priority: 'high'
+  })
+    .then(r => {
+      clearTimeout(timeoutId);
+      return r.json();
+    })
+    .then(data => {
+      if (data?.numbers?.[0]) {
+        window.location.href = data.numbers[0] + "?text=" + msg;
+      } else {
+        console.error("Webhook retornou dados inválidos");
+      }
+    })
+    .catch(() => {
+      clearTimeout(timeoutId);
+      console.error("Erro na requisição, redirecionando mesmo assim");
+    });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', redirectToTelegram);
+} else {
+  redirectToTelegram();
+}
+</script>
+
+<!-- Cloudflare Insights -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"0f79691cd3a148279ac878df6cb80404","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
